@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Pseudo selectors</title>
+    <style>
+        .container{
+            padding: 4px;
+        }
+        input{
+            display: block;
+            margin: 8px;
+        }
+        /* targetting input whose type is text ie; targetting by attribute*/
+        input[type='text']{
+            border-radius: 5px;
+        }
+
+        /* targetting nth-child */
+        li:nth-child(3){
+            color: blueviolet;
+        }
+
+        /* li:nth-child(2n + 0){
+            color: rgb(97, 133, 239);
+        } */
+        
+        /* li:nth-child(odd){
+            color:orangered;
+        }
+        li:nth-child(even){
+            color: rebeccapurple;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name:">
+            <input type="password" placeholder="Enter your password:">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">Item1</li>
+            <li class="item" id="item2">Item2</li>
+            <li class="item" id="item3">Item3</li>
+            <li class="item" id="item4">Item4</li>
+        </ul>
+    </div>
+</body>
+</html>

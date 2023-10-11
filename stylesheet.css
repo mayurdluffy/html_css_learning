@@ -1,0 +1,12 @@
+body{
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+}
+
+p{
+    color: blueviolet;
+    font-size: xx-large;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border and backgrounds</title>
+</head>
+<style>
+    #firstPara{
+        background-color: hsl(279, 53%, 56%);
+        height: 20vh;
+        width: 20vw;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 4px;
+        color: white;
+    }
+
+    #SecondPara{
+        background-color: hsl(267, 58%, 60%);
+        height: 20vh;
+        width: 20vw;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 4px;
+        color: white;
+    }
+
+    #thirdPara{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2RplctSXeySR2cD26kCyPWbiVcLjv1hcKg&usqp=CAU");
+        height: 20vh;
+        width: 20vw;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-repeat: no-repeat; /* repeat-x and repeat-y */
+        background-position: center, center;
+        padding: 4px;
+    }
+</style>
+<body>
+    <h3>This is a heading</h3>
+    <p id="firstPara">This is a paragraph</p>
+    <p id="SecondPara">This is a paragraph</p>
+    <p id="thirdPara">This is a paragraph</p>
+</body>
+</html>

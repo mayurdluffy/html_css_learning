@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box model</title>
+</head>
+<style>
+    /* *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+     */
+    .container{
+        background-color:antiquewhite;
+        border: 2px solid orange;
+        margin: 1rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        border-radius: 5px; 
+    }
+</style>
+<body>
+    <div class="container">
+        <h3>This is a heading</h3>
+        <p id="firstPara">This is first paragrpah</p>
+    </div>
+
+    <div class="container">
+        <h3>This is a heading</h3>
+        <p id="secondPara">This is second paragrpah</p>
+    </div>
+
+    <div class="container">
+        <h3>This is a heading</h3>
+        <p id="thirdPara">This is third paragrpah</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On Selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            background-color: bisque;
+            line-height: 4rem;
+        }
+        /* targetting direct p tag child of div */
+        /* div > p{
+            font-size: 2rem;
+            line-height: 4rem;
+            text-align: center;
+            background-color: rgb(209, 164, 251);
+        } */
+
+        /* targetting p tag whose adjacent upper sibling is a div */
+        div + p{
+            font-size: 2rem;
+            line-height: 4rem;
+            text-align: center;
+            background-color: rgb(209, 164, 251);
+        }
+    </style>
+</head>
+<body>
+    <h1>More On Selectors</h1>
+    <div class="container">
+        <div class="row">
+            <p>This is inner paragraph</p>
+        </div>
+        <p>This is middle paragraph</p>
+    </div>
+    <p>This is the outer paragraph</p>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position, Relative and Properties</title>
+    <style>
+        /* Positions: static(default), absolute, relative, fixed, sticky */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: bisque;
+            padding: 4px;
+            height: 150vh;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid black;
+            width: 20vw;
+            height: 20vh;
+            margin: 4px;
+            padding: 4px;
+        }
+        #box1{
+            background-color: rgb(253, 172, 172);
+            border-color: red;
+            position: sticky;
+            top: 4px;
+        }
+        #box2{
+            /* Note:
+                a) position relative means relative to its normal position
+                after setting position relative we can use top, right , bottom and left to give margin from its normal position.
+                
+                b) position absolute is same as of relative but its it relative to the parent component. We can set top, right, bottom and left after setting position to absolute.
+
+                c) position fixed means relative to the parent but will be fixed while scrolling.
+
+                d) position sticky means the element will stick to the top while scrolling.
+            */
+            background-color: rgb(124, 187, 243);
+            border-color: blue;
+            position: absolute;
+            top: 8vh;
+            left: 5vw;
+        }
+
+        #box3{
+            background-color: rgb(99, 248, 186);
+            border-color: green;
+            position: relative;
+            top: 15vh;
+            right: 5vw;
+        }
+        #box4{
+            background-color: rgb(195, 139, 247);
+            border-color: blueviolet;
+            position: fixed;
+            right: 2vw;
+            bottom: 2vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+</body>
+</html>

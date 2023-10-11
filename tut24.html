@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Properties</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: bisque;
+            padding: 4px;
+            height: 100vh;
+            display: flex;
+
+            /* properties for flex-container */
+            /* flex-direction: row, row-reverse, col, column-reverse; */
+            
+            /* by default no-wrap */
+            /* flex-wrap: wrap ; */
+
+            /* flex-flow is a short-hand that can set both the direction and wrap properties at once */
+            flex-flow: row wrap;
+
+            /* space-between, space-evenly, space-around */
+            justify-content: center;
+
+            /* flex-start, flex-end,  */
+            align-content: center;
+        }
+        .box{
+            /* display: inline-block; */
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 4px;
+            padding: 4px;
+        }
+        #box1{
+            background-color: rgb(253, 172, 172);
+            border-color: red;
+        }
+        #box2{
+            background-color: rgb(124, 187, 243);
+            border-color: blue;
+        }
+
+        #box3{
+            background-color: rgb(99, 248, 186);
+            border-color: green;
+            
+            /* properties for flex-items */
+            /* order: 2; higher the order later the element will be placed*/
+            /* flex-grow: 1;
+            flex-shrink: 2; */
+
+            /* flex-basis: 200px; controls the inline length of the element ie; width when the flex-direction is row and height when the flex-direction is column */
+
+            /* flex: 2 2 200px; short-hand that specifies the grow, shrink and basis for a element at once */
+        }
+        #box4{
+            background-color: rgb(195, 139, 247);
+            border-color: blueviolet;
+        }
+        #box5{
+            background-color: rgb(168, 209, 253);
+            border-color: rgb(43, 101, 226);
+        }
+        #box6{
+            background-color: rgb(166, 247, 139);
+            border-color: rgb(14, 173, 86);
+        }
+    </style>
+</head>
+<body>
+    <!-- flex-container -->
+    <div class="container">
+        <!-- flex-items -->
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+        <div class="box" id="box5">box5</div>
+        <div class="box" id="box6">box6</div>
+    </div>
+</body>
+</html>

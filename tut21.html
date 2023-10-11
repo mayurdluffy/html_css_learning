@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        /* Note: 
+            a) inline elements are the elements that takes the width according to its size and we cannot set a width for it.
+
+            b) block elements takes all the width as the view width and we can set a width for it. 
+            
+            c) inline-block elements are inline elments whose width can be customized.
+        */
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            /* border: 2px solid black; */
+            padding: 2px;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            display: block;
+            margin: 3px auto;
+            border-radius: 30px;
+            /* border: 2px solid black; */
+        }
+        h3{
+            font-family:cursive;
+            margin: 0;
+            text-align: center;
+            /* border: 2px solid black; */
+        }
+        .container{
+            width: fit-content;
+            margin: 20px auto;
+        }
+        .box{
+            border: 3px solid black;
+            padding: 30px;
+            margin: 4px;
+            display: inline-block;
+            box-sizing: border-box;
+            width: fit-content;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <!-- img -->
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210318103632/gfg.png" alt="logo">
+        <h3>Welcome to my blog.</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">This is my heading</h4>
+            <p class="para">This is a paragraph</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">This is my heading</h4>
+            <p class="para">This is a paragraph</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">This is my heading</h4>
+            <p class="para">This is a paragraph</p>
+        </div>
+    </div>
+</body>
+</html>

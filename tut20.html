@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a navbar</title>
+    <style>
+        .navbar{
+            background-color: black;
+            border-radius: 5px;
+        }
+        .navbar ul{
+            overflow: auto;
+            
+        }
+        .navbar li{
+            list-style: none;
+            float: left;
+            margin: 12px;
+        }
+        .navbar li a{
+            text-decoration: none;
+            color: white;
+        }
+        .searchbox{
+            padding: 2px;
+            margin: 8px 20px;
+            float: right;
+        }
+        .searchbox input{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+            <div class="searchbox">
+                <input type="search" name="search" id="" placeholder="search">
+            </div>
+        </ul>
+    </nav>
+</body>
+</html>

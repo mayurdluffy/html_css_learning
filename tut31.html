@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Variables/ Custom Properties</title>
+    <style>
+        :root{
+             /* custom-variables */
+             --box-primary: rgb(158, 158, 240);
+             --box-width: 20vw;
+        }
+
+        .container{
+            margin: 4px;
+            padding: 4px;
+            display: flex;
+        }
+        .box{
+            margin: 8px;
+            padding: 4px;
+            width: 20vw;
+            max-width: var(--box-width);
+            height: 20vh;
+            background-color: var(--box-primary);
+            border: 2px solid blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+    </div>
+</body>
+</html>

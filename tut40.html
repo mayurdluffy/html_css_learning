@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries With Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            gap: 0.2rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer';
+        }
+
+        h2 {
+            margin: 8px;
+        }
+
+        span {
+            margin: 4px;
+        }
+
+        p {
+            padding: 10px;
+            text-align: justify;
+        }
+
+        nav {
+            background-color: black;
+            color: white;
+            padding: 4px;
+            display: flex;
+            justify-content: center;
+            grid-area: navbar;
+        }
+
+        section {
+            background-color: blueviolet;
+            padding: 20px;
+            color: white;
+            grid-area: section;
+        }
+
+        aside {
+            background-color: rgb(163, 74, 248);
+            padding: 20px;
+            color: white;
+            grid-area: aside;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            grid-area: footer;
+        }
+
+        @media only screen and (max-width: 300px) {
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width: 500px) {
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer';
+            }
+        }
+
+        @media only screen and (min-width: 500px) and (max-width: 800px) {}
+
+        @media only screen and (min-width: 800px) {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="navbar">
+            <span>Home</span>
+            <span>Services</span>
+            <span>About</span>
+            <span>Contact</span>
+        </nav>
+        <section>
+            <h2>This is a section</h2>
+            <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum impedit quia illo quidem
+                iusto accusamus illum? Ratione, sed harum magni minus nesciunt voluptate, suscipit fugiat fugit
+                doloribus quia ut tempore, quam ipsam doloremque?Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Assumenda atque commodi voluptates delectus tempora vitae iste culpa unde, asperiores, minus quas
+                vel non distinctio sit excepturi est consectetur aspernatur magnam rem quam. Tempore, amet! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Quas voluptate eveniet quos voluptatem ullam quibusdam
+                laudantium, iste ducimus debitis in asperiores accusantium ipsam, aperiam modi deleniti, repudiandae
+                suscipit? Perferendis nemo eum itaque pariatur ratione officia, molestiae totam, quasi rem quaerat
+                laborum qui delectus culpa reprehenderit cumque id dolores labore. Ducimus adipisci aliquam similique
+                perspiciatis earum id temporibus iste, quas dolorem modi, deleniti maxime. Doloremque perferendis quod
+                dolore nesciunt perspiciatis facilis accusamus aperiam, esse, reprehenderit alias tempore architecto
+                quibusdam dicta. Laborum nemo ad esse, possimus atque harum debitis consectetur velit ipsa rerum neque
+                repellat magni maxime, est et? Odio delectus sint ea repellendus et animi, excepturi magni aspernatur
+                officiis quaerat sequi molestiae, blanditiis facilis quam esse! At incidunt ducimus nostrum nam, harum
+                ad. Expedita recusandae rem, dignissimos delectus eos maiores aperiam! Neque, facere quod harum
+                obcaecati corporis dolorum laborum consequatur, quae illum veritatis laudantium asperiores dicta
+                suscipit consectetur. Rem amet aut eligendi corrupti, consequatur eos quasi fugiat excepturi ut
+                architecto inventore, animi autem illum nobis ipsum sunt minus reiciendis dolorum blanditiis nam iusto
+                sint quisquam! Optio quaerat possimus, quasi vitae architecto illum non eaque ab, dicta odit nemo harum
+                culpa odio ratione. Itaque modi quidem ipsa tempore praesentium quae quis a?Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Repudiandae omnis itaque officia iure natus consequatur architecto atque
+                magni dolor accusamus labore nulla quod cumque dicta reiciendis aliquam eos non quaerat et, minima
+                voluptas praesentium perferendis nihil ducimus? Voluptate, atque quisquam. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Eveniet excepturi alias labore porro id voluptate dignissimos culpa
+                corporis asperiores enim obcaecati accusantium deleniti adipisci incidunt aut atque perspiciatis
+                sapiente, voluptatum mollitia soluta. Maiores, error! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Illo quas harum, voluptates similique ex voluptate voluptas beatae labore vitae molestias impedit
+                ea vero veniam architecto explicabo expedita repellendus nostrum nihil reprehenderit dignissimos soluta
+                praesentium. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fuga numquam ullam mollitia
+                soluta, placeat ea quas enim debitis porro.
+            </p>
+        </section>
+        <aside>
+            <h2>More about us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quibusdam vitae repudiandae laboriosam
+                iusto tempora dolorum magnam quod fuga ducimus!</p>
+        </aside>
+        <footer>@copyright LearnCSS-2023</footer>
+    </div>
+</body>
+
+</html>

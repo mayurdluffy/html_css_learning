@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Animations and Keyframes</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+             /* custom-variables */
+             --primary: rgb(158, 158, 240);
+             --secondary: rgb(111, 111, 253);
+             --box-width: 20vw;
+        }
+
+        .container{
+            padding: 4px;
+            display: flex;
+            height: 100vh;
+            background-color: var(--primary);
+        }
+        .box{
+            margin: 8px;
+            padding: 8px;
+            width: 20vw;
+            color: blue;
+            text-align: center;
+            text-shadow: 1px 1px 1px var(--secondary); 
+            max-width: var(--box-width);
+            height: 20vh;
+            background-color: var(--secondary);
+            border: 2px solid blue;
+            border-radius: 5px;
+
+            /* to move the element on the page */
+            position: relative;
+
+            /* animation */
+            /* animation-name: anime2;
+            animation-duration: 8s;
+            animation-iteration-count:infinite; */
+            /* animation-fill-mode: forwards or alternate;
+                reach to the end state of the element when forwards else 
+                on alternate the state of the element will be initial state
+            */
+            /* ease-in, ease-in-out, ease-out */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-delay: 3s; */
+            /* animation-direction: alternate; */
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+            animation: anime1 4s ease-in-out 0s infinite alternate forwards;
+            /* animation: anime2 8s ease-in-out 0s infinite alternate forwards;  */
+        }
+
+        @keyframes anime1 {
+            from{
+                left: 0;
+            }to{
+                left: 78vw;
+            }
+        }
+        @keyframes anime2 {
+            0%{
+                top:0;
+                left:0;
+            }
+            25%{
+                top:0;
+                left:78vw;
+            }
+            75%{
+                top:75vh;
+                left:78vw;
+            }
+            100%{
+                top:75vh;
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Animation Box</div>
+    </div>
+</body>
+</html>

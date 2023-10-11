@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Z-index</title>
+    <style>
+        /* Note:
+            display: none ( hidden + space is being removed)
+            Visibility: visible(default), hidden(block space is conserved)
+            
+            Z-index specifies the level or depth of stacking.
+            NB: Z-index only works on positioned element which is not static.    
+        */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: bisque;
+            padding: 4px;
+            height: 100vh;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid black;
+            width: 20vw;
+            height: 20vh;
+            margin: 4px;
+            padding: 4px;
+        }
+        #box1{
+            background-color: rgb(253, 172, 172);
+            border-color: red;
+            position: relative;
+            z-index: 1;
+        }
+        #box2{
+            background-color: rgb(124, 187, 243);
+            border-color: blue;
+            position: absolute;
+            top: 5vh;
+            left: 5vw;
+        }
+
+        #box3{
+            background-color: rgb(99, 248, 186);
+            border-color: green;
+            position: absolute;
+            top: 10vh;
+            left: 10vw;
+            z-index: 2;
+        }
+        #box4{
+            background-color: rgb(195, 139, 247);
+            border-color: blueviolet;
+            position: absolute;
+            top: 15vh;
+            left: 15vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+</body>
+</html>
